@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NO FILTER GENERATION</title>
+<style>
+body {
+  background: #101827;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+  padding: 25px;
+}
+.container {
+  max-width: 450px;
+  margin: auto;
+}
+h1 { color: #38bdf8; }
+textarea {
+  width: 100%;
+  height: 130px;
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+button {
+  background: #0284c7;
+  color: white;
+  border: 0;
+  padding: 14px;
+  margin: 10px;
+  border-radius: 8px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>NO FILTER GENERATION</h1>
+<h3>AI YouTube Automation</h3>
+<p>Create your YouTube video scripts</p>
+<textarea id="topic" placeholder="Enter your video topic..."></textarea>
+<br>
+<button onclick="generate()">Generate Script</button>
+<div id="result"></div>
+</div>
+<script>
+function generate() {
+ let topic = document.getElementById("topic").value;
+ if (!topic.trim()) {
+  alert("Please enter a topic");
+  return;
+ }
+ document.getElementById("result").innerHTML =
+ "<h3>Your Topic</h3><p></p>";
+ document.querySelector("#result p").textContent = topic;
+}
+</script>
+</body>
+</html>
